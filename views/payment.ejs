@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/angular.js" type="text/javascript"></script>
+    <style type="text/css" media="screen">
+        html, body{
+            background-color: #eeeeee;
+        }
+       /* [class*="col"]{
+            background-color: lightgreen;
+            border: solid;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }*/
+        .head{
+            height: 70px;;
+        }
+    </style>
+</head>
+<body ng-app="registrationApp">
+<div class="row">
+    <div class="col-sm-12">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">School Name here</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a> </li>
+                <li><a href="#">About</a> </li>
+                <li><a href="#">Contact</a> </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- end of the Header.... -->
+<!-- Begin of the body of the page.... -->
+<!-- <div class="container"> -->
+<!-- We are creating a little space from the header.. -->
+<div class="head row"></div>
+<!-- Here is where it stopped.. -->
+    <div class="row" ng-app="listStudents">
+        <div class="col-sm-offset-1 col-sm-2">
+            <nav class="navbar navbar-default navbar-left">
+                <ul class="nav navbar-header">
+                    <li><a href="#">Forms 1 &nbsp;&nbsp;&nbsp;&nbsp; <span class="badge badge-success" id="registered1">45</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-warning" id="unregistered1">105</span> </a></li>
+                    <li><a href="#">Forms 2 &nbsp;&nbsp;&nbsp;&nbsp; <span class="badge badge-success" id="registered2">63</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-warning" id="unregistered2">250</span> </a></li>
+                    <li><a href="#">Forms 3 &nbsp;&nbsp;&nbsp;&nbsp; <span class="badge badge-success" id="registered3">18</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-warning" id="unregistered3">360</span> </a></li>
+                    <li><a href="#">Forms 4 &nbsp;&nbsp;&nbsp;&nbsp; <span class="badge badge-success" id="registered4">57</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-warning" id="unregistered4">10</span> </a></li>
+                    <li><a href="#">Forms 5 &nbsp;&nbsp;&nbsp;&nbsp; <span class="badge badge-success" id="registered5">17</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-warning" id="unregistered5">15</span> </a> </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+            <div class="row">
+                <div class="col-sm-offset-10 col-sm-2">
+                    // Search box...
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    Filled with list of students
+                </div>
+                <div class="col-md-4">
+                    Filled with list of some students
+                </div>
+                <div class="col-md-4">
+                    To fill with the list of some students...
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->
+<!-- End of the body of the document -->
+<!-- Begining of the footer -->
+<div class="row">
+    <div class="col-sm-12">
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <p class="text-center">A website designed by franckstifler copywriht 2015</p>
+        </nav>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="studentInfos">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p><h4>Student names: </h4><h1 id="studentName"></h1></p>
+                <p><h4>Student sex: </h4><h1 id="studentSex"> </h1></p>
+                <p><h4>Student Place of Birth: </h4><h1 id="studentPob"></h1></p>
+                <p><h4>Student Registered? : </h4><h1 id="studentRegistered"></h1></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- We are creating a little space from the header.. -->
+<div class="head row"></div>
+<!-- Here is where it stopped.. -->
+<div class="row">
+    <div class="col-sm-push-1 col-sm-3">
+        <nav class="navbar navbar-default navbar-left">
+            <ul class="nav navbar-header" >
+                <li><a ui-sref="payment.form1Registered"><h5>Forms 1</h5></a></li>
+                <li><a ui-sref="payment.form2Registered"><h5>Forms 2</h5></a></li>
+                <li><a ui-sref="payment.form3Registered"><h5>Forms 3</h5></a></li>
+                <li><a ui-sref="payment.form4Registered"><h5>Forms 4</h5></a></li>
+                <li><a ui-sref="payment.form5Registered"><h5>Forms 5</h5></a> </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-sm-7 col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-striped" ng-init="getRegisteredStudents()">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Student Name</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="student in students">
+                        <td>{{student._id}}</td>
+                        <td> <b><a href="#" ng-click="studentInfos($event, student._id)">{{student.name | uppercase}} {{student.surname}} </a></b></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</div>

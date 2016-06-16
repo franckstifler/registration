@@ -1,0 +1,87 @@
+
+<!-- end of the Header.... -->
+<div class="head row"></div>
+<div class="well">
+    <form class="form-horizontal" ng-submit="addStudent()">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Register student</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput">Name</label>
+                <div class="col-md-4">
+                    <input id="textinput" name="textinput" type="text" placeholder="Name" class="form-control input-md" required="" ng-model="student.name">
+                    <span class="help-block">Enter name here</span>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="studentSurname" >Surname</label>
+                <div class="col-md-4">
+                    <input id="studentSurname" name="studentSurname" type="text" placeholder="Surname" class="form-control input-md" required="" ng-model="student.surname">
+                    <span class="help-block">Enter surname here.</span>
+                </div>
+            </div>
+
+            <!-- Multiple Radios (inline) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Sex</label>
+                <div class="col-md-4">
+                    <label class="radio-inline" for="Sex-0">
+                        <input type="radio" name="Sex" id="Sex-0" value="M" ng-model="student.sex">
+                        M
+                    </label>
+                    <label class="radio-inline" for="Sex-1">
+                        <input type="radio" name="Sex" id="Sex-1" value="F" ng-model="student.sex">
+                        F
+                    </label>
+                </div>
+            </div>
+
+            <!-- Prepended text-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="dateOB">Date of Birth</label>
+                <div class="col-md-2">
+                        <input id="dateOB" name="dateOB" class="form-control" placeholder="" type="date" required="" ng-model="student.dob" min="" max="">
+                    <p class="help-block">Enter date of birth</p>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="placeOB">Place of Birth</label>
+                <div class="col-md-4">
+                    <input id="placeOB" name="placeOB" type="text" placeholder="Place of Birth" class="form-control input-md" required="" ng-model="student.pob">
+
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="class">Class</label>
+                <div class="col-md-4">
+                    <select id="class" name="class" class="form-control" ng-model="student.class">
+                        <option value="form1">Form 1</option>
+                        <option value="form2">Form 2</option>
+                        <option value="form3">Form 3</option>
+                        <option value="form4">Form 4</option>
+                        <option value="form5">Form 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="submit">Submit</label>
+                <div class="col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>

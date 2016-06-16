@@ -1,0 +1,48 @@
+<!-- We are creating a little space from the header.. -->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p><h4>Student names: </h4><h1>{{studentRegistered.name}}  {{studentRegistered.surname}}</h1></p>
+                <p><h4>Student sex: </h4><h1>{{studentRegistered.sex}} </h1></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="head row"></div>
+<div class="head row"></div>
+<!-- Here is where it stopped.. -->
+<div class="col-md-offset-2 col-md-8 col-md-offset-2 well">
+    <form ng-submit="getVerification()">
+        <fieldset>
+            <legend>Verify student</legend>
+            <div>
+                <label class="col-md-3 control-label" for="class">Registration ID</label>
+                <div class="col-md-5">
+                    <input type="text" placeholder="Enter registration Id (36 characters)" class="form-control input-md" required="" ng-model="student.id" minlength="36" maxlength="36">
+                </div>
+                <label class="col-md-1 control-label" for="class">Class</label>
+                <div class="col-md-3">
+                    <select id="class" name="class" class="form-control" ng-model="student.class">
+                        <option value="form1">Form 1</option>
+                        <option value="form2">Form 2</option>
+                        <option value="form3">Form 3</option>
+                        <option value="form4">Form 4</option>
+                        <option value="form5">Form 5</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <br/>
+        <div class="col-md-offset-5 col-md-2 col-md-offset-5">
+            <button type="button" id="submit" name="submit" class="btn btn-info" data-toggle="modal" ng-click="getVerification()">Submit</button>
+        </div>
+    </form>
+</div>

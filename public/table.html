@@ -1,0 +1,79 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="studentInfos">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p><h4>Student names: </h4><h1 id="studentName"></h1></p>
+                <p><h4>Student sex: </h4><h1 id="studentSex"> </h1></p>
+                <p><h4>Student Place of Birth: </h4><h1 id="studentPob"></h1></p>
+                <p><h4>Student Registered? : </h4><h1 id="studentRegistered"></h1></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- We are creating a little space from the header.. -->
+<div class="head row"></div>
+<!-- Here is where it stopped.. -->
+<div class="row">
+    <div class="col-sm-push-1 col-sm-3">
+        <nav class="navbar navbar-default navbar-left hidden-xs">
+            <ul class="nav navbar-left" style="cursor: pointer;" >
+                <li><a href="#/payment/form1"><h5>Forms 1</h5></a></li>
+                <li class="nav-divider"></li>
+                <li ><a href="#/payment/form2"><h5> Forms 2 </h5></a></li>
+                <li class="nav-divider"></li>
+                <li><a ui-sref="payment.form3Unregistered"><h5>Forms 3 </h5></a></li>
+                <li class="nav-divider"></li>
+                <li><a ui-sref="payment.form4Unregistered"><h5>Forms 4 </h5></a></li>
+                <li class="nav-divider"></li>
+                <li><a ui-sref="payment.form5Unregistered"><h5>Forms 5 </h5></a> </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-sm-7 col-xs-12">
+        <form class="form-horizontal" ng-controller="payment" ng-submit="paymentConfirmation()">
+            <div class="row">
+                <div class="col-xs-push-4 col-xs-4 ">
+                    <input type="text" class="input-md center-block form-control" placeholder="Enter student name" ng-model="searchStudent.name">
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped" ng-init="getStudents()">
+                    <thead style="cursor: pointer;">
+                    <tr>
+                        <th>Student Id</th>
+                        <th>Sex</th>
+                        <th id="adonis">Student Name <i class="fa fa-sort-alpha-desc"></i></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="student in students | orderBy:'name' | filter:searchStudent">
+                                <td>{{student._id}}</td>
+                                <td>{{ student.sex }}</td>
+                                <td> <b><a href="#" ng-click="studentInfos($event, student._id)">{{student.name | uppercase}} {{student.surname}} </a></b></td>
+                                <td>
+                                    <input id="{{student._id}}" name="register" type="checkbox" class="checkbox-inline" ng-checked="checked"+$index ng-click="studentChecker($event, 'checked'+$index)">
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Button -->
+            <div class="col-xs-offset-9 col-xs-3">
+                <div class="col-md-offset-5 col-md-4">
+                    <button id="submit" name="submit" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
