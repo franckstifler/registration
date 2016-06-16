@@ -14,7 +14,7 @@ var app = express();
 
 //start the db
 //mongoose.connect('mongodb://127.0.0.1/studentRegistration2');
-mongoose.connect('mongodb://<stifler>:<stifler>@ds045475.mlab.com:45475/student_registration');
+mongoose.connect('mongodb://stifler:stifler@ds045475.mlab.com:45475/student_registration');
 
 //fill with fake data:
  //require('./models/faker')();
